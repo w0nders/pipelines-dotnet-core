@@ -34,5 +34,5 @@ steps:
     azureSubscription: 'Azure Subscription (MONT Sponsorship)'
     appType: 'webApp'
     WebAppName: 'webapp-tst'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)'
     
