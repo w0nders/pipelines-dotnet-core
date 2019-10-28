@@ -22,16 +22,6 @@ steps:
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Бесплатная пробная версия (99b97507-3af0-4483-a7ba-f38a8386fc21)'
-    appType: 'webApp'
-    WebAppName: 'wonders-test'
-    packageForLinux: '$(build.artifactstagingdirectory)'
-
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
